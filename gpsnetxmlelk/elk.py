@@ -10,6 +10,8 @@ class Elk(Elasticsearch):
         if "index" not in kwargs:
             raise Exception("Please set index!")
 
+        kwargs["timeout"] = 120
+
         self._index = kwargs["index"]
         del kwargs["index"]
 

@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import argparse
+
+from gpsnetxmlelk import Elk2kismon
+
+p = argparse.ArgumentParser(
+    description="Exporta data from Elasticsearch to kismon json format",
+    prog="elk2kismon")
+
+p.add_argument("output", help="Path to output json file")
+
+args = p.parse_args()
+
+el = Elk2kismon(args.output, True)
+el.save()

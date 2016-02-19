@@ -6,3 +6,4 @@ from . insertgpsnetxmlelk import *
 from . insertgpsxmlelk import *
 from . insertnetxmlelk import *
 from . insertnetxmlelk import *
+from . elk2kismon import *
