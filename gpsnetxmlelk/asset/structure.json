@@ -1,0 +1,701 @@
+{
+    "mappings": {
+        "files": {
+            "properties": {
+                "kismet_version": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
+                "time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "gps_version": {
+                    "type": "long"
+                },
+                "file": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                }
+            }
+        },
+        "gps": {
+            "properties": {
+                "alt": {
+                    "type": "double"
+                },
+                "bssid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "fix": {
+                    "type": "long"
+                },
+                "hdop": {
+                    "type": "double",
+                    "index": "no"
+                },
+                "heading": {
+                    "type": "double",
+                    "index": "no"
+                },
+                "location": {
+                    "type": "geo_point"
+                },
+                "noise_dbm": {
+                    "type": "long"
+                },
+                "noise_rssi": {
+                    "type": "long"
+                },
+                "signal_dbm": {
+                    "type": "long"
+                },
+                "signal_rssi": {
+                    "type": "long"
+                },
+                "source": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "spd": {
+                    "type": "double",
+                    "index": "no"
+                },
+                "time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "vdop": {
+                    "type": "double",
+                    "index": "no"
+                },
+                "files": {
+                    "type": "string"
+                }
+            }
+        },
+        "networks": {
+            "properties": {
+                "bssid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "bsstimestamp": {
+                    "type": "long"
+                },
+                "carrier": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "cdp_device": {
+                    "index": "no",
+                    "type": "string"
+                },
+                "cdp_portid": {
+                    "index": "no",
+                    "type": "string"
+                },
+                "channel": {
+                    "type": "long"
+                },
+                "datasize": {
+                    "type": "long"
+                },
+                "dhcp_hostname": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "dhcp_vendor": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "encoding": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "freqmhz": {
+                    "properties": {
+                        "2412": {
+                            "type": "long"
+                        },
+                        "2417": {
+                            "type": "long"
+                        },
+                        "2422": {
+                            "type": "long"
+                        },
+                        "2427": {
+                            "type": "long"
+                        },
+                        "2432": {
+                            "type": "long"
+                        },
+                        "2437": {
+                            "type": "long"
+                        },
+                        "2442": {
+                            "type": "long"
+                        },
+                        "2447": {
+                            "type": "long"
+                        },
+                        "2452": {
+                            "type": "long"
+                        },
+                        "2457": {
+                            "type": "long"
+                        },
+                        "2462": {
+                            "type": "long"
+                        },
+                        "2467": {
+                            "type": "long"
+                        },
+                        "2472": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "gps_info": {
+                    "properties": {
+                        "avg_alt": {
+                            "type": "double",
+                            "index": "no"
+                        },
+                        "avg_lat": {
+                            "type": "double",
+                            "index": "no"
+                        },
+                        "avg_lon": {
+                            "type": "double",
+                            "index": "no"
+                        },
+                        "max_alt": {
+                            "type": "double"
+                        },
+                        "max_lat": {
+                            "type": "double"
+                        },
+                        "max_lon": {
+                            "type": "double"
+                        },
+                        "max_spd": {
+                            "type": "double"
+                        },
+                        "min_alt": {
+                            "type": "double"
+                        },
+                        "min_lat": {
+                            "type": "double"
+                        },
+                        "min_lon": {
+                            "type": "double"
+                        },
+                        "min_spd": {
+                            "type": "double"
+                        },
+                        "peak_alt": {
+                            "type": "double"
+                        },
+                        "peak_lat": {
+                            "type": "double"
+                        },
+                        "peak_lon": {
+                            "type": "double"
+                        }
+                    }
+                },
+                "ip_address": {
+                    "properties": {
+                        "ip_block": {
+                            "type": "ip"
+                        },
+                        "ip_gateway": {
+                            "type": "ip"
+                        },
+                        "ip_netmask": {
+                            "type": "ip"
+                        },
+                        "ip_type": {
+                            "index": "not_analyzed",
+                            "type": "string"
+                        }
+                    }
+                },
+                "last_time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "location": {
+                    "properties": {
+                        "max": {
+                            "type": "geo_point"
+                        },
+                        "min": {
+                            "type": "geo_point"
+                        },
+                        "peak": {
+                            "type": "geo_point"
+                        }
+                    }
+                },
+                "manuf": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "maxseenrate": {
+                    "type": "double"
+                },
+                "number": {
+                    "type": "long"
+                },
+                "packets": {
+                    "properties": {
+                        "crypt": {
+                            "type": "long"
+                        },
+                        "data": {
+                            "type": "long"
+                        },
+                        "fragments": {
+                            "type": "long"
+                        },
+                        "llc": {
+                            "type": "long"
+                        },
+                        "retries": {
+                            "type": "long"
+                        },
+                        "total": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "seen_cards": {
+                    "type": "string"
+                },
+                "snr_info": {
+                    "properties": {
+                        "last_noise_dbm": {
+                            "type": "long"
+                        },
+                        "last_noise_rssi": {
+                            "type": "long"
+                        },
+                        "last_signal_dbm": {
+                            "type": "long"
+                        },
+                        "last_signal_rssi": {
+                            "type": "long"
+                        },
+                        "max_noise_dbm": {
+                            "type": "long"
+                        },
+                        "max_noise_rssi": {
+                            "type": "long"
+                        },
+                        "max_signal_dbm": {
+                            "type": "long"
+                        },
+                        "max_signal_rssi": {
+                            "type": "long"
+                        },
+                        "min_noise_dbm": {
+                            "type": "long"
+                        },
+                        "min_noise_rssi": {
+                            "type": "long"
+                        },
+                        "min_signal_dbm": {
+                            "type": "long"
+                        },
+                        "min_signal_rssi": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "ssids": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "object",
+                    "index": "no"
+                },
+                "time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "type": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "wireless_clients": {
+                    "type": "string"
+                },
+                "files": {
+                    "type": "string"
+                }
+            }
+        },
+        "seen_cards": {
+            "properties": {
+                "bssid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "client_mac": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "packets_no": {
+                    "type": "long"
+                },
+                "time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "uuid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                }
+            }
+        },
+        "ssids": {
+            "properties": {
+                "beaconrate": {
+                    "type": "long"
+                },
+                "bssid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "client_mac": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "cloaked": {
+                    "type": "boolean"
+                },
+                "dev_name": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "dot11d": {
+                    "type": "object",
+                    "index": "no"
+                },
+                "encryption": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "essid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "info": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "last_time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "max_rate": {
+                    "type": "double"
+                },
+                "model_name": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "model_num": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "packets_no": {
+                    "type": "long"
+                },
+                "time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "type": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "wpa_version": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "wps": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "wps_manuf": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                }
+            }
+        },
+        "wireless_clients": {
+            "properties": {
+                "bssid": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "carrier": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "cdp_device": {
+                    "index": "no",
+                    "type": "string"
+                },
+                "cdp_portid": {
+                    "index": "no",
+                    "type": "string"
+                },
+                "channel": {
+                    "type": "long"
+                },
+                "client_mac": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "client_manuf": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "datasize": {
+                    "type": "long"
+                },
+                "dhcp_hostname": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "dhcp_vendor": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "encoding": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "freqmhz": {
+                    "properties": {
+                        "2412": {
+                            "type": "long"
+                        },
+                        "2417": {
+                            "type": "long"
+                        },
+                        "2422": {
+                            "type": "long"
+                        },
+                        "2427": {
+                            "type": "long"
+                        },
+                        "2432": {
+                            "type": "long"
+                        },
+                        "2437": {
+                            "type": "long"
+                        },
+                        "2442": {
+                            "type": "long"
+                        },
+                        "2447": {
+                            "type": "long"
+                        },
+                        "2452": {
+                            "type": "long"
+                        },
+                        "2457": {
+                            "type": "long"
+                        },
+                        "2462": {
+                            "type": "long"
+                        },
+                        "2467": {
+                            "type": "long"
+                        },
+                        "2472": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "gps_info": {
+                    "properties": {
+                        "avg_alt": {
+                            "type": "double",
+                            "index": "no"
+                        },
+                        "avg_lat": {
+                            "type": "double",
+                            "index": "no"
+                        },
+                        "avg_lon": {
+                            "type": "double",
+                            "index": "no"
+                        },
+                        "max_alt": {
+                            "type": "double"
+                        },
+                        "max_lat": {
+                            "type": "double"
+                        },
+                        "max_lon": {
+                            "type": "double"
+                        },
+                        "max_spd": {
+                            "type": "double"
+                        },
+                        "min_alt": {
+                            "type": "double"
+                        },
+                        "min_lat": {
+                            "type": "double"
+                        },
+                        "min_lon": {
+                            "type": "double"
+                        },
+                        "min_spd": {
+                            "type": "double"
+                        },
+                        "peak_alt": {
+                            "type": "double"
+                        },
+                        "peak_lat": {
+                            "type": "double"
+                        },
+                        "peak_lon": {
+                            "type": "double"
+                        }
+                    }
+                },
+                "ip_address": {
+                    "properties": {
+                        "ip_block": {
+                            "type": "ip"
+                        },
+                        "ip_gateway": {
+                            "type": "ip"
+                        },
+                        "ip_netmask": {
+                            "type": "ip"
+                        },
+                        "ip_type": {
+                            "index": "not_analyzed",
+                            "type": "string"
+                        }
+                    }
+                },
+                "last_time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "location": {
+                    "properties": {
+                        "max": {
+                            "type": "geo_point"
+                        },
+                        "min": {
+                            "type": "geo_point"
+                        },
+                        "peak": {
+                            "type": "geo_point"
+                        }
+                    }
+                },
+                "maxseenrate": {
+                    "type": "double"
+                },
+                "number": {
+                    "type": "long"
+                },
+                "packets": {
+                    "properties": {
+                        "crypt": {
+                            "type": "long"
+                        },
+                        "data": {
+                            "type": "long"
+                        },
+                        "fragments": {
+                            "type": "long"
+                        },
+                        "llc": {
+                            "type": "long"
+                        },
+                        "retries": {
+                            "type": "long"
+                        },
+                        "total": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "seen_cards": {
+                    "type": "string"
+                },
+                "snr_info": {
+                    "properties": {
+                        "last_noise_dbm": {
+                            "type": "long"
+                        },
+                        "last_noise_rssi": {
+                            "type": "long"
+                        },
+                        "last_signal_dbm": {
+                            "type": "long"
+                        },
+                        "last_signal_rssi": {
+                            "type": "long"
+                        },
+                        "max_noise_dbm": {
+                            "type": "long"
+                        },
+                        "max_noise_rssi": {
+                            "type": "long"
+                        },
+                        "max_signal_dbm": {
+                            "type": "long"
+                        },
+                        "max_signal_rssi": {
+                            "type": "long"
+                        },
+                        "min_noise_dbm": {
+                            "type": "long"
+                        },
+                        "min_noise_rssi": {
+                            "type": "long"
+                        },
+                        "min_signal_dbm": {
+                            "type": "long"
+                        },
+                        "min_signal_rssi": {
+                            "type": "long"
+                        }
+                    }
+                },
+                "ssids": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "object"
+                },
+                "time": {
+                    "format": "date_hour_minute_second_millis",
+                    "type": "date"
+                },
+                "type": {
+                    "index": "not_analyzed",
+                    "type": "string"
+                },
+                "files": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

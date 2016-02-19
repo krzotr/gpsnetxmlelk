@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import argparse
+
+from gpsnetxmlelk import InsertGpsnetxmlElk
+
+p = argparse.ArgumentParser(
+    description="Insert .netxml and .gpsxml files into elasticsearch",
+    prog="gpsnetxml2elk",)
+
+p.add_argument("--index", default="kisme", metavar="name",
+               help="Index name, default kisme")
+p.add_argument("file", nargs="+", help="List of .netxml or .gpsxml files."
+                                       "You can skip extensions.")
+
+args = p.parse_args()
+
+gpsnet = InsertGpsnetxmlElk(args.file, args.index)
+gpsnet.insert()
